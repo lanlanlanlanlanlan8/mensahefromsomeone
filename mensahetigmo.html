@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Code</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2em;
+            color: #007bff;
+        }
+        h2 {
+            font-size: 1.2em;
+            color: #555;
+            margin: 10px 0;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        input[type="button"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="button"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>TIGMO</h1>
+        <h2>The Art of Unspoken Words</h2>
+        <p>Enter Your Code:</p>
+        <input type="text" id="code" placeholder="Enter your code">
+        <input type="button" value="Submit" onclick="checkCode()">
+    </div>
+
+    <script>
+        // Define your code and redirect URL here
+        const codes = {
+            'TIGMOMENSAHE01JC': 'https://1drv.ms/b/c/1ebb5dba131a99e8/EeVhcwIqwGBNkz1UsB_CQ4ABoJKIAJSwtrcnaDgNHjakfQ'
+        };
+
+        function checkCode() {
+            const code = document.getElementById('code').value;
+            const redirectUrl = codes[code];
+
+            if (redirectUrl) {
+                window.location.href = redirectUrl;
+            } else {
+                alert('Invalid code. Please reach out to Tigmo\'s admin to fix it.');
+            }
+        }
+    </script>
+</body>
+</html>
